@@ -1,0 +1,23 @@
+body{
+    background-color: rgb(125, 124, 124);
+    color: rgb(242, 240, 240);
+}
+
+h1{
+    text-align: center;
+}
+
+input{
+    width: 165px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.categoria, .opcoes-entrada, .opcoes-saida{
+    width: 170px;
+}
