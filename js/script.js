@@ -1,5 +1,5 @@
 
-// variaveis chamando os elementos
+// variaveis chamando os elementos por id 
 var categoria = document.getElementById("categoria")
 var opcoesEntrada = document.getElementById("opcoes-entrada")
 var opcoesSaida = document.getElementById("opcoes-saida")
@@ -8,7 +8,8 @@ var valor = document.getElementById("valor")
 var resultado = document.getElementById("resultado")
 
 
-// 
+//  Utilizando o addEventListener pra quando selecionar a categoria aparecer as outras opções de medida, no campo de unidade de entrada e de saida.
+// Utilizado a função anonima pois ela só é executada dentro do próprio escopo e não é reutilizada.
 categoria.addEventListener("change", function () {
     if (categoria.value == "temperatura") {
         opcoesEntrada.innerHTML = ` 
@@ -39,9 +40,10 @@ categoria.addEventListener("change", function () {
         <option value="libras">Libras</option>`
     }
 })
-
+// Utilizado pra página não ficar reiniciando quando clica no botão. 
 botao.addEventListener('click', (event) => event.preventDefault());
 
+// Utilizado o addEventListener quando clicar, se o value da opção de entrada for igual a celsius e o value da saida for igual a fr o resultado executa a função celsiusPFr que faz a conversão de celsius para fr e assim por diante. 
 botao.addEventListener('click', function(){     
     var pegarValor = +valor.value
     if (opcoesEntrada.value == "celsius" && opcoesSaida.value == "fahrenheit") {
@@ -76,7 +78,7 @@ botao.addEventListener('click', function(){
         resultado.innerText = centPMetro(pegarValor)
     } else if (opcoesEntrada.value == "metros" && opcoesSaida.value == "polegadas") {
         resultado.innerText = metroPPolegada(pegarValor)
-    } else if (opcoesEntrada.value == "poelgadas" && opcoesSaida.value == "metros") {
+    } else if (opcoesEntrada.value == "polegadas" && opcoesSaida.value == "metros") {
         resultado.innerText = polegadaPMetro(pegarValor)
     }
 })
