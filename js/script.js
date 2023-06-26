@@ -24,11 +24,11 @@ categoria.addEventListener("change", function () {
         opcoesEntrada.innerHTML = ` 
         <option value="metros">Metros</option>
         <option value="centimetros">Centimetros</option>
-        <option value="polegas">Polegadas</option>`
+        <option value="polegadas">Polegadas</option>`
         opcoesSaida.innerHTML = ` 
         <option value="metros">Metros</option>
         <option value="centimetros">Centimetros</option>
-        <option value="polegas">Polegadas</option>`
+        <option value="polegadas">Polegadas</option>`
     } else if (categoria.value == "peso") {
         opcoesEntrada.innerHTML = ` 
         <option value="kg">Kg</option>
@@ -57,7 +57,7 @@ botao.addEventListener('click', function(){
     } else if (opcoesEntrada.value == "kelvin" && opcoesSaida.value == "celsius") {
         resultado.innerText = kelvinPCelsius(pegarValor)
     } else if (opcoesEntrada.value == "kelvin" && opcoesSaida.value == "fahrenheit") {
-        resultado.innerText = kelvinPFrs(pegarValor)
+        resultado.innerText = kelvinPFr(pegarValor)
     } else if (opcoesEntrada.value == "kg" && opcoesSaida.value == "gramas") {
         resultado.innerText = kgParaGrama(pegarValor)
     } else if (opcoesEntrada.value == "gramas" && opcoesSaida.value == "kg") {
@@ -79,8 +79,9 @@ botao.addEventListener('click', function(){
     }  else if (opcoesEntrada.value == "metros" && opcoesSaida.value == "centimetros") {
         resultado.innerText = metroPCent(pegarValor)
     }  else if (opcoesEntrada.value == "metros" && opcoesSaida.value == "polegadas") {
+        console.log("pudim")
         resultado.innerText = metroPPolegada(pegarValor)
-    }  else if (opcoesEntrada.value == "polegadas" && opcoesSaida.value == "metros") {
+    } else if (opcoesEntrada.value == "polegadas" && opcoesSaida.value == "metros") {
         resultado.innerText = polegadaPMetro(pegarValor)
     }
 }) 
