@@ -59,29 +59,33 @@ botao.addEventListener('click', function(){
     } else if (opcoesEntrada.value == "kelvin" && opcoesSaida.value == "fahrenheit") {
         resultado.innerText = kelvinPFrs(pegarValor)
     } else if (opcoesEntrada.value == "kg" && opcoesSaida.value == "gramas") {
-        resultado.innerText = kelvinPFrs(pegarValor)
-    } else if (opcoesEntrada.value == "gramas" && opcoesSaida.value == "kg") {
         resultado.innerText = kgParaGrama(pegarValor)
+    } else if (opcoesEntrada.value == "gramas" && opcoesSaida.value == "kg") {
+        resultado.innerText = gramaPKg(pegarValor)
     } else if (opcoesEntrada.value == "gramas" && opcoesSaida.value == "libras") {
         resultado.innerText = gramaPLibra(pegarValor)
-    } else if (opcoesEntrada.value == "libras" && opcoesSaida.value == "gramas") {
+    }  else if (opcoesEntrada.value == "libras" && opcoesSaida.value == "gramas") {
         resultado.innerText = libraPGrama(pegarValor)
-    } else if (opcoesEntrada.value == "kg" && opcoesSaida.value == "libras") {
+    }   else if (opcoesEntrada.value == "kg" && opcoesSaida.value == "libras") {
         resultado.innerText = kgPLibra(pegarValor)
-    } else if (opcoesEntrada.value == "libras" && opcoesSaida.value == "kg") {
+    }   else if (opcoesEntrada.value == "libras" && opcoesSaida.value == "kg") {
         resultado.innerText = libraPKg(pegarValor)
-    } else if (opcoesEntrada.value == "centimetros" && opcoesSaida.value == "polegadas") {
+    }    else if (opcoesEntrada.value == "centimetros" && opcoesSaida.value == "polegadas") {
         resultado.innerText = centPPolegada(pegarValor)
     }  else if (opcoesEntrada.value == "polegadas" && opcoesSaida.value == "centimetros") {
         resultado.innerText = polegadaPCent(pegarValor)
     } else if (opcoesEntrada.value == "centimetros" && opcoesSaida.value == "metros") {
         resultado.innerText = centPMetro(pegarValor)
-    } else if (opcoesEntrada.value == "metros" && opcoesSaida.value == "polegadas") {
+    }  else if (opcoesEntrada.value == "metros" && opcoesSaida.value == "centimetros") {
+        resultado.innerText = metroPCent(pegarValor)
+    }  else if (opcoesEntrada.value == "metros" && opcoesSaida.value == "polegadas") {
         resultado.innerText = metroPPolegada(pegarValor)
-    } else if (opcoesEntrada.value == "polegadas" && opcoesSaida.value == "metros") {
+    }  else if (opcoesEntrada.value == "polegadas" && opcoesSaida.value == "metros") {
         resultado.innerText = polegadaPMetro(pegarValor)
     }
-})
+}) 
+
+
 
 // unidades de peso, funções com a operação de conversão 
 function kgParaGrama(kg) {
